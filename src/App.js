@@ -5,7 +5,7 @@ import AboutUs from './components/AboutUs';
 import Alert from './components/Alert';
 import Disabled from './components/Disabled';
 import React, {useState} from 'react';
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 function App() {
@@ -97,20 +97,17 @@ function App() {
   }
 
   return <>
-    {/* <BrowserRouter> */}
+    <BrowserRouter>
       <Navbar title = "Text Formatter" mode={mode} toggleBlueMode={toggleBlueMode} toggleGreenMode={toggleGreenMode} toggleRedMode={toggleRedMode}/>
       <Alert alert={alert}/>
       <div className = "container my-3">
-        <TextForm heading = "Enter your text below" mode={mode} showAlert={showAlert}/>
-        <AboutUs />
-        <Disabled />
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<TextForm heading = "Enter your text below" mode={mode} showAlert={showAlert}/>}/>
           <Route path="/AboutUs" element={<AboutUs />}/>
-          <Route path="/Disabled" element={<Disabled />}/>
-        </Routes> */}
+          <Route path="/Disabled" element={<Disabled mode={mode}/>}/>
+        </Routes>
       </div>
-    {/* </BrowserRouter> */}
+    </BrowserRouter>
   </>
 }
 

@@ -1,27 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'; 
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default function Navbar(props) {
     return (
       <nav className="navbar navbar-expand" style={{backgroundColor: '#444141'}}>
         {/* <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}> */}
         <div className="container-fluid">
-          {/* <Link className="navbar-brand" style={{color: 'white'}} to="/">{props.title}</Link> */}
-          <a className="navbar-brand" style={{color: 'white'}} href="#">{props.title}</a>
+          <Link className="navbar-brand" style={{color: 'white'}} to="/">{props.title}</Link>
+          {/* <a className="navbar-brand" style={{color: 'white'}} href="#">{props.title}</a> */}
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                {/* <Link className="nav-link active" aria-current="page" to="/" style={{color: 'white'}}>Home</Link> */}
-                <a className="nav-link active" aria-current="page" href="#" style={{color: 'white'}}>Home</a>
+                <Link className="nav-link active" aria-current="page" to="/" style={{color: 'white'}}>Home</Link>
+                {/* <a className="nav-link active" aria-current="page" href="#" style={{color: 'white'}}>Home</a> */}
               </li>
               <li className="nav-item">
-                {/* <Link className="nav-link" to="/aboutus" style={{color: 'white'}}>{props.about}</Link> */}
-                <a className="nav-link" href="/aboutus" style={{color: 'white'}}>{props.about}</a>
+                <Link className="nav-link" to="/aboutus" style={{color: 'white'}}>{props.about}</Link>
+                {/* <a className="nav-link" href="/aboutus" style={{color: 'white'}}>{props.about}</a> */}
               </li>
               <li>
-                {/* <Link className="nav-link" to="/disabled" style={{color: 'white'}}>Typing master</Link> */}
-                <a className="nav-link" href="/disabled" style={{color: 'white'}}>Typing master</a>
+                <Link className="nav-link" to="/disabled" style={{color: 'white'}}>Typing master</Link>
+                {/* <a className="nav-link" href="/disabled" style={{color: 'white'}}>Typing master</a> */}
               </li>
             </ul>
             

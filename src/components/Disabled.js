@@ -15,7 +15,8 @@ export default function Disabled(props)  {
 
     return (
         <>
-            <div className={`text-${props.mode === 'light'?'dark':'light'}`}>
+            {/* <div className={`text`}> */}
+            <div className={`text-${props.mode === 'white'?'dark':'white'}`}>
                 <h3>Start writing to get your typing speed!</h3>
                 <textarea className="form-control my-4" id="hello" value={text} placeholder="write here...." onChange={helloFunction} rows="6"/>
                 <p>{text.length>0? text.split(" ").length:0} words</p>
